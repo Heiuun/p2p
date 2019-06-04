@@ -1,0 +1,17 @@
+#server:
+#    port: 8081
+
+#spring:
+#  application:
+#    name: LOGIN
+    
+#eureka:
+#    instance:
+#       instance-id: login-api-8081
+#        prefer-ip-address: true # 访问路径可以显示 IP
+#    client:
+#        service-url:
+#            defaultZone: http://localhost:9999/eureka/  # 注册中心访问地址
+#ribbon:
+#  eureka:
+#    enabled: true

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zl.dao.LoginMapper">
+    <resultMap type="LoginInfo" id="queryByNickNameAndPassMap">
+     <id column="login_info_id" property="loginInfoId"/>
+     <result column="nick_name" property="nickName"/>
+     <result column="phone" property="phone"/>
+     <result column="pass" property="pass"/>
+     <result column="create_time" property="createTime"/>
+      <result column="update_time" property="updateTime"/>
+      <association property="userState" javaType="UserState">
+        <id column="user_state_id" property="userStateId"/>
+        <result column="state_code" property="stateCode"/>
+        <result column="state_detial" property="stateDetial"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="state" property="state"/>
+      </association>
+    </resultMap>
+    
+	<select id="queryByNickNameAndPass" resultMap="queryByNickNameAndPassMap">
+		select * from login_info,user_state where nick_name = #{nickName} and pass=#{pass} and login_state=#{loginState} and login_state = state_code
+	</select>
+</mapper>
