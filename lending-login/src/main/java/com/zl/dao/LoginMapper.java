@@ -17,9 +17,8 @@ public interface LoginMapper {
 	 * 
 	 * @param nickName 用户名
 	 * @param pass     密码
-	 * @param loginState 状态
 	 * @return 用户登录信息
 	 */
-	LoginInfo queryByNickNameAndPass(@Param("nickName") String nickName, @Param("pass") String pass,@Param("loginState") Integer loginState);
+	LoginInfo queryByNickNameAndPass(@Param("nickName") String nickName, @Param("pass") String pass);
 
 }

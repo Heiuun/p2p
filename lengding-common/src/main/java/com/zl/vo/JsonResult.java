@@ -24,10 +24,6 @@ public class JsonResult {
 		this.msg = msg;
 	}
 
-	public boolean isSuccess() {
-		return code==Err.SUCESS;
-	}
-
 	public int getCode() {
 		return code;
 	}

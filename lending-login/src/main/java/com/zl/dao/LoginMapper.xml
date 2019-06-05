@@ -19,6 +19,6 @@
     </resultMap>
     
 	<select id="queryByNickNameAndPass" resultMap="queryByNickNameAndPassMap">
-		select * from login_info,user_state where nick_name = #{nickName} and pass=#{pass} and login_state=#{loginState} and login_info.login_state = user_state.state_code
+		select * from login_info,user_state where login_info.nick_name = #{nickName} and login_info.pass=#{pass} and login_info.login_state = user_state.state_code
 	</select>
 </mapper>
