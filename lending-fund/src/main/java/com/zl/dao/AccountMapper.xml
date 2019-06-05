@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zl.dao.AccountMapper">
+	<!-- <resultMap type="LoginInfo" id="queryByNickNameAndPassMap"> <id column="login_info_id" 
+		property="loginInfoId"/> <result column="nick_name" property="nickName"/> 
+		<result column="phone" property="phone"/> <result column="pass" property="pass"/> 
+		<result column="create_time" property="createTime"/> <result column="update_time" 
+		property="updateTime"/> <association property="userState" javaType="UserState"> 
+		<id column="user_state_id" property="userStateId"/> <result column="state_code" 
+		property="stateCode"/> <result column="state_detial" property="stateDetial"/> 
+		<result column="create_time" property="createTime"/> <result column="update_time" 
+		property="updateTime"/> <result column="state" property="state"/> </association> 
+		</resultMap> -->
+
+	<select id="queryAllById" resultType="Account">
+		select
+		ID,balance,avaliable_balance,total_loan,total_num,principal,create_time,update_time,state
+		from account where id = #{id}
+	</select>
+</mapper>
