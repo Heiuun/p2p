@@ -42,7 +42,6 @@ public class LoginServiceImpl implements LoginService {
 
 	@Override
 	public Map<String, Object> getUserStates(Integer pageNum, Integer pageSize) {
-		
 		List<UserState> userStateList = userStateMapper.queryAllStates();
 		//PageHelper分页插件使用
 		PageHelper.startPage(pageNum, pageSize);
